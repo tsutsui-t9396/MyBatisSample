@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBatis Sample</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>年齢</th>
+        </tr>
+        <tr th:each="parent : ${parentList}" th:object="${parent}">
+            <th th:text="*{id}"></th>
+            <th th:text="*{name}"></th>
+            <th th:text="*{age}"></th>
+        </tr>
+    </table>
+</body>
+</html>
